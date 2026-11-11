@@ -22,7 +22,7 @@ et référencent chaque personne par son `keycloakId` (claim `sub` du JWT).
 | Groupe | | `analysis-service` (microservice commun) | MongoDB | |
 
 ## 3. Architecture
-Diagramme global : `Documentation/Diagrams/` (à ajouter).
+Diagramme global : `Documentation/Diagrams/`.
 
 - **Infrastructure :** Angular, API Gateway (Spring Cloud Gateway), Eureka, Config Server, Keycloak, RabbitMQ, MinIO, Docker Compose.
 - **Stack :** Java 17, Spring Boot 3, Spring Data JPA, springdoc-openapi, Maven. IA : Whisper, LanguageTool.
@@ -36,10 +36,8 @@ Frontend/         application Angular
 Documentation/    Presentation/ · Diagrams/ · Dossier_Technique_SpeakUp.docx
 ```
 
-## 5. Lancement (validation 1)
-Les projets sont créés ; la logique métier démarre à la séance 5. `docker-compose.yml` : séance 9.
-```bash
-cd Backend/<service> && ./mvnw spring-boot:run      # Java 17
+## 5. Lancement 
+
 ```
 
 ## 6. Gestion de projet et Git
