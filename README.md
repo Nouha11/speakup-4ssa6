@@ -37,8 +37,8 @@ Documentation/    Presentation/ · Diagrams/ · Dossier_Technique_SpeakUp.docx
 ```
 
 ## 5. Lancement 
+--
 
-```
 
 ## 6. Gestion de projet et Git
 - Kanban : GitHub Projects – **lien à compléter**
