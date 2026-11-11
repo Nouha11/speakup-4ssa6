@@ -42,7 +42,7 @@ Documentation/    Presentation/ · Diagrams/ · Dossier_Technique_SpeakUp.docx
 
 ## 6. Gestion de projet et Git
 - Kanban : GitHub Projects – **lien à compléter**
-- Branches `main` / `develop` / `feature/<service>-<fonctionnalité>`, Pull Request relue, Conventional Commits : voir `CONTRIBUTING.md`
+- Branches `main` / `<service>`
 
 ## 7. Données et licences
 Aucun apprenant réel n'est enregistré. Sources : Mozilla Common Voice (CC0), speechocean762 (CC BY 4.0),
