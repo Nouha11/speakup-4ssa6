@@ -1,6 +1,6 @@
 # SpeakUp – Entraînement et évaluation de l'expression orale (FR / EN)
 
-Mini-projet AWD (MT-41) – 2026-2027 – ESPRIT – Classe 4 SSA 6 – Enseignante : Rim Douss
+Mini-projet AWD (MT-41) – 2026-2027 – ESPRIT – Classe 4 SSA 6 – Enseignante : Rim Doussi
 
 ## 1. Sujet
 Application web distribuée qui fait parler l'apprenant, analyse sa prise de parole par IA (transcription, prononciation,
@@ -25,7 +25,7 @@ et référencent chaque personne par son `keycloakId` (claim `sub` du JWT).
 Diagramme global : `Documentation/Diagrams/`.
 
 - **Infrastructure :** Angular, API Gateway (Spring Cloud Gateway), Eureka, Config Server, Keycloak, RabbitMQ, MinIO, Docker Compose.
-- **Stack :** Java 17, Spring Boot 3, Spring Data JPA, springdoc-openapi, Maven. IA : Whisper, LanguageTool.
+- **Stack :** Java 17, Spring Boot 4.1, Spring Data JPA, springdoc-openapi, Maven. IA : Whisper, LanguageTool.
 - **Synchrone (OpenFeign + Resilience4j) :** `profile`→`content`, `recording`→`content`, `exam`→`content`, `certification`→`profile`, `progress`→`profile`, `profile`→Keycloak.
 - **Asynchrone (RabbitMQ) :** `audio.received`, `analysis.completed`, `exam.graded`, `level.estimated`, `user.deleted` (chacun avec un `eventId` pour l'idempotence).
 
@@ -36,13 +36,40 @@ Frontend/         application Angular
 Documentation/    Presentation/ · Diagrams/ · Dossier_Technique_SpeakUp.docx
 ```
 
-## 5. Lancement 
---
+## 5. Lancement
 
+### Pré-requis
+- Java 17, Maven 3.9+
+- Node.js 18+ et Angular CLI (pour `Frontend/`)
+- Docker et Docker Compose
+- Un realm Keycloak exporté (`keycloak/realm-export.json`, à versionner par le responsable Keycloak/Gateway)
+
+### En local, service par service (développement)
+```bash
+# Infrastructure d'abord
+cd Backend/config-server   && mvn spring-boot:run &
+cd Backend/eureka-server   && mvn spring-boot:run &
+cd Backend/api-gateway     && mvn spring-boot:run &
+
+# Puis chaque microservice (exemple profile-service)
+cd Backend/profile-service && mvn spring-boot:run
+```
+Chaque service expose sa documentation Swagger sur `http://localhost:<port>/swagger-ui.html`
+et sa console H2 (si H2) sur `/h2-console`.
+
+### Avec Docker Compose (démo complète)
+```bash
+docker compose up --build
+```
+`docker-compose.yml` démarre dans l'ordre : Keycloak, Config Server, Eureka, RabbitMQ, MinIO,
+puis l'API Gateway, les 7 microservices et le frontend Angular.
+
+*(Section à affiner une fois `docker-compose.yml` finalisé par le binôme Config/Eureka/Compose — S9 du planning.)*
 
 ## 6. Gestion de projet et Git
-- Kanban : GitHub Projects – **lien à compléter**
-- Branches `main` / `<service>`
+- Kanban : GitHub Projects — *lien à ajouter par le responsable de la gestion de projet dès sa création (voir §9/§10 du dossier technique)*
+- Branches `main` (protégée) / `develop` / `feature/<service>-<fonctionnalité>` ; fusion par Pull Request relue par un autre membre.
+- Commits : Conventional Commits (`feat`, `fix`, `docs`, `chore`), chacun depuis son propre compte.
 
 ## 7. Données et licences
 Aucun apprenant réel n'est enregistré. Sources : Mozilla Common Voice (CC0), speechocean762 (CC BY 4.0),
