@@ -34,8 +34,6 @@ Diagramme global : `Documentation/Diagrams/` (à ajouter).
 Backend/          un projet par microservice + api-gateway, eureka-server, config-server
 Frontend/         application Angular
 Documentation/    Presentation/ · Diagrams/ · Dossier_Technique_SpeakUp.docx
-scripts/          init-service.sh (génère le projet Spring Boot d'un service)
-.github/          CODEOWNERS, modèles de Pull Request et de ticket
 ```
 
 ## 5. Lancement (validation 1)
