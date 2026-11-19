@@ -17,6 +17,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *   Eureka Client, Config Client, OpenFeign, Resilience4j, Spring AMQP (RabbitMQ).
  */
 @SpringBootApplication
+@EnableDiscoveryClient
+
 public class CertificationServiceApplication {
 
     public static void main(String[] args) {
