@@ -1,6 +1,6 @@
 # MS2 – content-service
 
-Catalogue pédagogique de SpeakUp : **parcours**, **banque de sujets d'oral** (FR/EN, B1 → C2, par type de tâche, avec questions de relance) et **recommandations d'exercices** ciblant les erreurs récurrentes de l'apprenant.
+Catalogue pédagogique de Vocalibre : **parcours**, **banque de sujets d'oral** (FR/EN, B1 → C2, par type de tâche, avec questions de relance) et **recommandations d'exercices** ciblant les erreurs récurrentes de l'apprenant.
 
 | | |
 |---|---|

@@ -18,7 +18,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<name>recording-service</name>
-	<description>SpeakUp Recording Microservice</description>
+	<description>Vocalibre Recording Microservice</description>
 
 	<!-- Versions -->
 	<properties>

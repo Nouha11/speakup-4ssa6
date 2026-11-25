@@ -11,7 +11,7 @@ public class OpenApiConfig {
     @Bean
     public OpenAPI contentServiceOpenApi() {
         return new OpenAPI().info(new Info()
-                .title("SpeakUp - content-service (MS2)")
+                .title("Vocalibre - content-service (MS2)")
                 .version("0.1.0")
                 .description("Parcours, banque de sujets d'oral FR/EN B1-C2 et recommandations. "
                         + "Validation 1 : contrat d'API et donnees de demonstration ; regles metier a partir de S5."));

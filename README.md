@@ -1,4 +1,4 @@
-# SpeakUp – Entraînement et évaluation de l'expression orale (FR / EN)
+# Vocalibre – Entraînement et évaluation de l'expression orale (FR / EN)
 
 Mini-projet AWD (MT-41) – 2026-2027 – ESPRIT – Classe 4 SSA 6 – Enseignante : Rim Doussi
 
