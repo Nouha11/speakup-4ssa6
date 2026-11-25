@@ -14,7 +14,7 @@
     <artifactId>certification-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>certification-service</name>
-    <description>MS5 - SpeakUp Certification Service</description>
+    <description>MS5 - Vocalibre Certification Service</description>
 
     <properties>
         <java.version>17</java.version>

@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
- * MS2 - content-service : catalogue pedagogique de SpeakUp
+ * MS2 - content-service : catalogue pedagogique de Vocalibre
  * (parcours, banque de sujets d'oral, recommandations d'exercices).
  */
 @SpringBootApplication
