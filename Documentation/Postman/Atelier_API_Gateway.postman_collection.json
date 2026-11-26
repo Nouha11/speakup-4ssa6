@@ -1,0 +1,52 @@
+{
+  "info": {
+    "name": "Atelier API Gateway",
+    "description": "Atelier 6 - Partie 4 : une requete GET par microservice, passant par la Gateway (port 8089).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [ { "key": "gateway", "value": "http://localhost:8089" } ],
+  "item": [
+    {
+      "name": "profile-service - profil de l'utilisateur connecte",
+      "request": { "method": "GET", "url": "{{gateway}}/api/profils/me" },
+      "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": [
+        "pm.test('Statut 200', () => pm.response.to.have.status(200));"
+      ] } }]
+    },
+    {
+      "name": "content-service - liste des sujets",
+      "request": { "method": "GET", "url": "{{gateway}}/api/sujets" },
+      "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": [
+        "pm.test('Statut 200', () => pm.response.to.have.status(200));"
+      ] } }]
+    },
+    {
+      "name": "recording-service - liste des enregistrements",
+      "request": { "method": "GET", "url": "{{gateway}}/api/enregistrements" },
+      "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": [
+        "pm.test('Statut 200', () => pm.response.to.have.status(200));"
+      ] } }]
+    },
+    {
+      "name": "exam-service - historique des sessions",
+      "request": { "method": "GET", "url": "{{gateway}}/api/sessions" },
+      "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": [
+        "pm.test('Statut 200', () => pm.response.to.have.status(200));"
+      ] } }]
+    },
+    {
+      "name": "certification-service - regles de validation",
+      "request": { "method": "GET", "url": "{{gateway}}/api/regles" },
+      "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": [
+        "pm.test('Statut 200', () => pm.response.to.have.status(200));"
+      ] } }]
+    },
+    {
+      "name": "progress-service - liste des alertes",
+      "request": { "method": "GET", "url": "{{gateway}}/api/alertes" },
+      "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": [
+        "pm.test('Statut 200', () => pm.response.to.have.status(200));"
+      ] } }]
+    }
+  ]
+}
